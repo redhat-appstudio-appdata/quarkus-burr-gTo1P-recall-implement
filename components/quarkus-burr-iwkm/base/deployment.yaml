@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: quarkus-burr-iwkm
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload:gTo1P-quarkus-burr-iwkm
+      - image: quay.io/redhat-appstudio/user-workload@sha256:65be42f962095a18b9a80e4c1128224f0170ff576dca402e216c67d7b14552ff
         name: my-java-quarkus
         ports:
         - containerPort: 8081
