@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: quarkus-burr-iwkm
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: quarkus-burr-iwkm
+    app.kubernetes.io/part-of: quarkus-burr
+  name: quarkus-burr-iwkm
+  namespace: burrzinga-tenant
+spec:
+  ports:
+  - port: 8081
+    targetPort: 8081
+  selector:
+    app.kubernetes.io/instance: quarkus-burr-iwkm
+status:
+  loadBalancer: {}

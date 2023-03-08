@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: quarkus-burr-iwkm
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: quarkus-burr-iwkm
+    app.kubernetes.io/part-of: quarkus-burr
+  name: quarkus-burr-iwkm
+  namespace: burrzinga-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: quarkus-burr-iwkm
+    weight: null
+status: {}
